@@ -1,8 +1,229 @@
-h1{
-    color: aqua;
+/* RESET & VARIABLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul{
-    color: blue;
-    font-style: italic;
-    margin-bottom: 0lvi;
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HERO SECTION / HEADER */
+.hero {
+    background: linear-gradient(135deg, #1a2536 0%, #2c3e50 100%);
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.hero-text h3 {
+    font-size: 1.1rem;
+    color: #00d2d3;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero-text .bio {
+    font-size: 0.95rem;
+    color: #dcdde1;
+    margin-bottom: 20px;
+}
+
+/* FOTO PROFIL KANAN ATAS */
+.hero-photo img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00d2d3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* TOMBOL SOSIAL MEDIA */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp { background-color: #25D366; }
+.instagram { background-color: #E1306C; }
+.tiktok { background-color: #000000; border: 1px solid #333; }
+.email { background-color: #ea4335; }
+
+/* LAYOUT UTAMA */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* KARTU KONTEN */
+.card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #1a2536;
+    border-bottom: 2px solid #00d2d3;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card h2 i {
+    color: #00d2d3;
+}
+
+/* DETAIL LIST & TIMELINE */
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 6px;
+}
+
+.timeline-item {
+    margin-bottom: 12px;
+}
+
+.timeline-item h4 {
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.timeline-item .date {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* PENGALAMAN & ORGANISASI */
+.exp-item {
+    margin-bottom: 20px;
+}
+
+.exp-item h3 {
+    font-size: 1.05rem;
+    color: #1a2536;
+}
+
+.exp-item .date {
+    font-size: 0.82rem;
+    color: #16a085;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.exp-item ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.exp-item ul li {
+    margin-bottom: 4px;
+}
+
+.org-list {
+    list-style: none;
+}
+
+.org-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 0.9rem;
+}
+
+.org-list span {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    background: #f0f2f5;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* RESPONSIVE DESIGN (HP & TABLET) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
 }
